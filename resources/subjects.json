@@ -1,7 +1,58 @@
 [
-  { "code" : "6110", "name" : "Analisis matematico"},
-  { "code" : "7562", "name" : "Quimica"},
-  { "code" : "7834", "name" : "Base de datos"},
-  { "code" : "8874", "name" : "Fisica III"},
-  { "code" : "4767", "name" : "Tecncias de diseño"}
+  {
+    "id" : 1,
+    "department" : "75",
+    "code" : "41",
+    "name" : "Algoritmos y programación I",
+    "credits" : 8,
+    "courses" : [
+      {
+        "id" : 1,
+        "name" : "test"
+      }
+    ]
+  },
+  {
+    "id" : 2,
+    "department" : "61",
+    "code" : "03",
+    "name" : "Análisis matemático II A",
+    "credits" : 8,
+    "courses" : [
+      {
+        "id" : 2,
+        "name" : "2"
+      },
+      {
+        "id" : 3,
+        "name" : "2Test"
+      }
+    ]
+  },
+  {
+    "id" : 1,
+    "department" : "62",
+    "code" : "15",
+    "name" : "Física III D",
+    "credits" : 8,
+    "courses" : [
+      {
+        "id" : 4,
+        "name" : "test"
+      }
+    ]
+  },
+  {
+    "id" : 1,
+    "department" : "66",
+    "code" : "20",
+    "name" : "Organización de Computadoras",
+    "credits" : 2,
+    "courses" : [
+      {
+        "id" : 5,
+        "name" : "aaas"
+      }
+    ]
+  }
 ]

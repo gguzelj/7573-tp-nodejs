@@ -4,13 +4,9 @@ var router = express.Router();
 
 router.get('/', getAll);
 router.get('/:subject_id', getBySubjectId);
-//router.get('/:subject_id/courses', getCoursesBySubjectId);
-//router.get('/:subject_id/courses', getCourseBySubjectIdAndCourseId);
+router.get('/:subject_id/courses', getCoursesBySubjectId);
+router.get('/:subject_id/courses/:course_id', getCourseBySubjectIdAndCourseId);
 
-
-function getCourseBySubjectIdAndCourseId() {
-
-}
 
 function getAll(req, res) {
     service.findAll(function(all) {
@@ -24,8 +20,16 @@ function getBySubjectId(req, res) {
     });
 }
 
-function getCoursesBySubjectId() {
+function getCoursesBySubjectId(req, res) {
+    service.findCoursesBySubjectId(req.params.subject_id, function (result) {
+        res.send(result);
+    });
+}
 
+function getCourseBySubjectIdAndCourseId(req, res) {
+    service.findCourseBySubjectIdAndCourseId(req.params.subject_id, req.params.course_id, function (result) {
+        res.send(result);
+    });
 }
 
 module.exports = router;
