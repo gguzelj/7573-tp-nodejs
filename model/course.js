@@ -8,8 +8,6 @@ var Course = function (data) {
         schedule : processSchedules(data.schedule)
     };
 
-    //////////////////
-
     function processSchedules (schedulesData) {
         var response = [];
         for(var key in schedulesData) {
