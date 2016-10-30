@@ -1,20 +1,22 @@
+var Subject = require('../model/subject');
+
 var parsedJSON = require('../resources/subjects.json');
 
-var map = {}
+var map = {};
 
-parsedJSON.forEach(function (subject) {
-    map[subject.id] = subject;
+parsedJSON.forEach(function (jsonElement) {
+    map[jsonElement.id] = new Subject(jsonElement);
 });
 
 
-var Service = function() {
-    parsedJSON.forEach(function (subject) {
-        map[subject.id] = subject;
-    });
-};
+var Service = {};
 
 Service.findAll = function(callback) {
-    callback(map);
+    var response = [];
+    for(key in map){
+        response.push(map[key]);
+    }
+    callback(response);
 };
 
 Service.findBySubjectId = function(subjectId, callback) {

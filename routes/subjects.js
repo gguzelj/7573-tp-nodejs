@@ -1,3 +1,4 @@
+var Subject = require('../model/subject');
 var service = require('../service/subjectService');
 var express = require('express');
 var router = express.Router();
@@ -11,6 +12,7 @@ router.get('/:subject_id/courses/:course_id', getCourseBySubjectIdAndCourseId);
 function getAll(req, res) {
     service.findAll(function(all) {
         res.send(all);
+        //res.send(all.map(function (toMap) {return new Subject(toMap)}));
     });
 }
 
