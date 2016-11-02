@@ -29,6 +29,24 @@
             "from": "19:00",
             "to": "22:00"
           }
+        ],
+        "vacancy": 2,
+        "students": [
+          {
+            "name": "German",
+            "last_name": "Guzelj",
+            "student_id": "2131231"
+          },
+          {
+            "name": "Test2",
+            "last_name": "Test1",
+            "student_id": "123"
+          },
+          {
+            "name": "German3123",
+            "last_name": "Guzelj1123",
+            "student_id": "2131231111"
+          }
         ]
       }
     ]
@@ -61,6 +79,24 @@
             "day": "Miércoles",
             "from": "19:00",
             "to": "22:00"
+          }
+        ],
+        "vacancy": 15,
+        "students": [
+          {
+            "name": "German",
+            "last_name": "Guzelj",
+            "student_id": "2131231"
+          },
+          {
+            "name": "Test2",
+            "last_name": "Test1",
+            "student_id": "123"
+          },
+          {
+            "name": "German3123",
+            "last_name": "Guzelj1123",
+            "student_id": "2131231111"
           }
         ]
       }
@@ -98,26 +134,5 @@
         ]
       }
     ]
-  },
-  {
-    "id": 4,
-    "department": "61",
-    "code": "03",
-    "name": "Análisis matemático II A",
-    "credits": 8
-  },
-  {
-    "id": 5,
-    "department": "62",
-    "code": "15",
-    "name": "Física III D",
-    "credits": 8
-  },
-  {
-    "id": 6,
-    "department": "66",
-    "code": "20",
-    "name": "Organización de Computadoras",
-    "credits": 2
   }
 ]

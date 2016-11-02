@@ -6,6 +6,7 @@ router.get('/', getAll);
 router.get('/:subject_id', getBySubjectId);
 router.get('/:subject_id/courses', getCoursesBySubjectId);
 router.get('/:subject_id/courses/:course_id', getCourseBySubjectIdAndCourseId);
+router.get('/:subject_id/courses/:course_id/students', getStudentsBySubjectIdAndCourseId);
 
 router.post('/', createSubject);
 router.put('/:subject_id', updateSubject);
@@ -34,6 +35,13 @@ function getCourseBySubjectIdAndCourseId(req, res) {
     service.findCourseBySubjectIdAndCourseId(req.params.subject_id, req.params.course_id, function (result) {
         if (!result) {res.statusCode = 204;}
         res.send(result);
+    });
+}
+
+function getStudentsBySubjectIdAndCourseId(req, res) {
+    service.findCourseBySubjectIdAndCourseId(req.params.subject_id, req.params.course_id, function (result) {
+        if (!result) {res.statusCode = 204;}
+        res.send(result.students);
     });
 }
 
