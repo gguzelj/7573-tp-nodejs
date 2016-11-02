@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "department": "75",
+    "code": "43",
+    "name": "INTRODUCCION A LOS SISTEMAS DISTRIBUIDOS",
+    "credits": 6,
+    "courses": [
+      {
+        "id": 1,
+        "headquarters": "(PC) Paseo Colon",
+        "professors": [
+          "BERNARDEZ, JOSE MARIA",
+          "BEIRO, MARIANO GASTON",
+          "FRYMER, GABRIEL ESTEBAN"
+        ],
+        "schedule": [
+          {
+            "classroom": "LF",
+            "type": "Práctica",
+            "day": "Martes",
+            "from": "19:00",
+            "to": "22:00"
+          },
+          {
+            "classroom": "512",
+            "type": "Teórica Obligatoria",
+            "day": "Viernes",
+            "from": "19:00",
+            "to": "22:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "department": "75",
+    "code": "26",
+    "name": "SIMULACIÓN",
+    "credits": 6,
+    "courses": [
+      {
+        "id": 1,
+        "headquarters": "(PC) Paseo Colon",
+        "professors": [
+          "CADOCHE, PABLO",
+          "BENITEZ, CARLOS MARCELO"
+        ],
+        "schedule": [
+          {
+            "classroom": "LE",
+            "type": "Desarrollo y Consulta",
+            "day": "Martes",
+            "from": "19:00",
+            "to": "21:00"
+          },
+          {
+            "classroom": "422",
+            "type": "Teórico Práctica Obligatoria",
+            "day": "Miércoles",
+            "from": "19:00",
+            "to": "22:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "department": "75",
+    "code": "73",
+    "name": "ARQUITECTURA DEL SOFTWARE",
+    "credits": 6,
+    "courses": [
+      {
+        "id": 1,
+        "headquarters": "(PC) Paseo Colon",
+        "professors": [
+          "DIEZ, EDUARDO LUIS",
+          "RUGILO, GUILLERMO HERNAN"
+        ],
+        "schedule": [
+          {
+            "classroom": "LC",
+            "type": "Teórica Obligatoria",
+            "day": "Jueves",
+            "from": "19:00",
+            "to": "21:00"
+          },
+          {
+            "classroom": "404",
+            "type": "Práctica",
+            "day": "Viernes",
+            "from": "19:00",
+            "to": "21:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "department": "61",
+    "code": "03",
+    "name": "Análisis matemático II A",
+    "credits": 8
+  },
+  {
+    "id": 5,
+    "department": "62",
+    "code": "15",
+    "name": "Física III D",
+    "credits": 8
+  },
+  {
+    "id": 6,
+    "department": "66",
+    "code": "20",
+    "name": "Organización de Computadoras",
+    "credits": 2
+  }
+]

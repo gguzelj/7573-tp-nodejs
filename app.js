@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 
 // REGISTER OUR ROUTES -------------------------------
-app.use('/subjects', subjectsRouter);
+app.use('/api/subjects', subjectsRouter);
 
 
 // START THE SERVER
