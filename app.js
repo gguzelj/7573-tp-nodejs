@@ -5,7 +5,7 @@
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
-var subjectsRouter = require('./routes/subjects')
+var subjectsRouter = require('./routes/subjects');
 
 // Configuration of App
 app.use(bodyParser.urlencoded({ extended: true }));
