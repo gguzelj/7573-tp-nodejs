@@ -19,7 +19,7 @@ router.get('/:subject_id/courses/:course_id/students', getStudentsBySubjectIdAnd
 
 router.post('/', createSubject);
 router.put('/:subject_id', updateSubject);
-router.post('/:subject_id/courses/:course_id/', enrollStudent);
+router.post('/:subject_id/courses/:course_id', enrollStudent);
 
 function getAll(req, res) {
     service.findAll(function(all) {
