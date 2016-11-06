@@ -19,6 +19,7 @@ router.get('/:subject_id/courses/:course_id/students', getStudentsBySubjectIdAnd
 
 router.post('/', createSubject);
 router.put('/:subject_id', updateSubject);
+router.post('/:subject_id/courses/:course_id/', enrollStudent);
 
 function getAll(req, res) {
     service.findAll(function(all) {
@@ -67,6 +68,17 @@ function createSubject(req, res, next) {
 
 function updateSubject(req, res, next) {
     service.updateSubject(req.params.subject_id, req.body, function(err, response) {
+        if (err) {
+            err.code = 400;
+            return next(err);
+        }
+        res.statusCode = 200;
+        res.send(response);
+    });
+}
+
+function enrollStudent(req, res, next) {
+    service.enrollStudent(req.params.subject_id, req.params.course_id, req.body, function(err, response) {
         if (err) {
             err.code = 400;
             return next(err);

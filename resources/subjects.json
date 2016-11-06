@@ -48,6 +48,49 @@
             "student_id": "2131231111"
           }
         ]
+      },
+      {
+        "id": 2,
+        "headquarters": "(PC) Paseo Colon",
+        "professors": [
+          "Profersor test",
+          "profesor 2",
+          "profesor 3"
+        ],
+        "schedule": [
+          {
+            "classroom": "LF",
+            "type": "Práctica Teorica Obligatoria",
+            "day": "Martes",
+            "from": "13:00",
+            "to": "22:00"
+          },
+          {
+            "classroom": "512",
+            "type": "No se sabe todavía",
+            "day": "Jueves",
+            "from": "11:00",
+            "to": "22:00"
+          }
+        ],
+        "vacancy": 15,
+        "students": [
+          {
+            "name": "German",
+            "last_name": "Guzelj",
+            "student_id": "2131231"
+          },
+          {
+            "name": "Test2",
+            "last_name": "Test1",
+            "student_id": "123"
+          },
+          {
+            "name": "German3123",
+            "last_name": "Guzelj1123",
+            "student_id": "2131231111"
+          }
+        ]
       }
     ]
   },
@@ -131,7 +174,8 @@
             "from": "19:00",
             "to": "21:00"
           }
-        ]
+        ],
+        "vacancy": 0
       }
     ]
   }
