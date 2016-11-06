@@ -54,10 +54,14 @@ Service.updateSubject = function(subject_id, subject, callback) {
 Service.enrollStudent = function(subject_id, course_id, studentBody, callback) {
     if (!subject_id) { return callback(new Error('subject id cant be null'), null);}
     if (!course_id) { return callback(new Error('course id cant be null'), null);}
-    if (!map[subject_id]) { return callback(new Error('No subject with id ' + subject_id + ' exists'), null); }
-    if (!map[subject_id].courses[course_id]) { return callback(new Error('No course with id ' + course_id + ' exists'), null); }
 
-    var course = map[subject_id].courses[course_id];
+    var subject = map[subject_id];
+    if (!subject) return callback(new Error('No subject exists with id ' + subject_id), null);
+
+    var courses = subject.courses;
+    var course = courses.filter(function (element) {return element.id == course_id}).pop();
+    if (!course) return callback(new Error('No course exists with id ' + course_id), null);
+
     for(var index in course.students) {
         if (course.students[index].student_id == studentBody.student_id) {
             return callback(new Error('Already enrolled student with id ' + studentBody.student_id), null);
@@ -67,7 +71,7 @@ Service.enrollStudent = function(subject_id, course_id, studentBody, callback) {
     course.students.push(newStudent);
 
     return callback(null, newStudent);
-}
+};
 
 module.exports = Service;
 
