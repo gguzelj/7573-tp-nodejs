@@ -82,4 +82,27 @@ Service.enrollStudent = function(subject_id, course_id, studentBody, callback) {
     return callback(null, newStudent);
 };
 
+Service.unrollStudent = function(subject_id, course_id, student_id, callback) {
+    if (!subject_id) { return callback(new Error('subject id cant be null'), null);}
+    if (!course_id) { return callback(new Error('course id cant be null'), null);}
+
+    var subject = map[subject_id];
+    if (!subject) return callback(new Error('No subject exists with id ' + subject_id), null);
+
+    var courses = subject.courses;
+    var course = courses.filter(function (element) {return element.id == course_id}).pop();
+    if (!course) return callback(new Error('No course exists with id ' + course_id), null);
+
+    var toDelete;
+    course.students.forEach(function(student, index, object) {
+        if (student.student_id === student_id) {
+            toDelete = student;
+            object.splice(index, 1);
+        }
+    });
+    ++course.vacancy;
+
+    return callback(null, toDelete);
+};
+
 module.exports = Service;

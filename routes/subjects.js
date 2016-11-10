@@ -16,10 +16,11 @@ router.get('/:subject_id', getBySubjectId);
 router.get('/:subject_id/courses', getCoursesBySubjectId);
 router.get('/:subject_id/courses/:course_id', getCourseBySubjectIdAndCourseId);
 router.get('/:subject_id/courses/:course_id/students', getStudentsBySubjectIdAndCourseId);
-
 router.post('/', createSubject);
+
 router.put('/:subject_id', updateSubject);
 router.post('/:subject_id/courses/:course_id', enrollStudent);
+router.delete('/:subject_id/courses/:course_id/students/:student_id', unrollStudent);
 
 function getAll(req, res) {
     service.findAll(function(all) {
@@ -79,6 +80,16 @@ function updateSubject(req, res, next) {
 
 function enrollStudent(req, res, next) {
     service.enrollStudent(req.params.subject_id, req.params.course_id, req.body, function(err, response) {
+        if (err) {
+            res.status(401).send({ message: err.message });
+        }
+        res.statusCode = 200;
+        res.send(response);
+    });
+}
+
+function unrollStudent(req, res, next) {
+    service.unrollStudent(req.params.subject_id, req.params.course_id, req.params.student_id, function(err, response) {
         if (err) {
             res.status(401).send({ message: err.message });
         }
