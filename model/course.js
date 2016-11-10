@@ -7,7 +7,7 @@ var Course = function (data) {
         headquarters : data.headquarters || undefined,
         professors : data.professors || undefined,
         schedule : mapArray(data.schedule, function (scheduleJson) {return new Schedule(scheduleJson)}),
-        vacancy : data.vacancy || undefined,
+        vacancy : data.vacancy || 0,
         students : mapArray(data.students, function (studentJson) {return new Student(studentJson)})
     };
 

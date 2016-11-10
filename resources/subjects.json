@@ -30,7 +30,7 @@
             "to": "22:00"
           }
         ],
-        "vacancy": 10,
+        "vacancy": 0,
         "students": [
           {
             "name": "Martin",

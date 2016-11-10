@@ -71,6 +71,10 @@ Service.enrollStudent = function(subject_id, course_id, studentBody, callback) {
     var course = courses.filter(function (element) {return element.id == course_id}).pop();
     if (!course) return callback(new Error('No course exists with id ' + course_id), null);
 
+    if (course.vacancy <= 0) {
+        return callback(new Error('No more vacancy for course ' + course_id), null);
+    }
+
     var newStudent = new Student(studentBody);
     course.students.push(newStudent);
     --course.vacancy;
