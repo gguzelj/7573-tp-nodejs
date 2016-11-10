@@ -80,8 +80,7 @@ function updateSubject(req, res, next) {
 function enrollStudent(req, res, next) {
     service.enrollStudent(req.params.subject_id, req.params.course_id, req.body, function(err, response) {
         if (err) {
-            err.code = 400;
-            return next(err);
+            res.status(401).send({ message: err.message });
         }
         res.statusCode = 200;
         res.send(response);
