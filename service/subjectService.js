@@ -62,7 +62,6 @@ Service.enrollStudent = function(subject_id, course_id, studentBody, callback) {
 
     for(var course_id in courses){
       for(var index in courses[course_id].students) {
-        console.log(courses[course_id].students[index].student_id);
         if (courses[course_id].students[index].student_id == studentBody.student_id) {
             return callback(new Error('Already enrolled student with id ' + studentBody.student_id), null);
         }
