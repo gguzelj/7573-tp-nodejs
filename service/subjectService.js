@@ -59,14 +59,19 @@ Service.enrollStudent = function(subject_id, course_id, studentBody, callback) {
     if (!subject) return callback(new Error('No subject exists with id ' + subject_id), null);
 
     var courses = subject.courses;
+
+    for(var course_id in courses){
+      for(var index in courses[course_id].students) {
+        console.log(courses[course_id].students[index].student_id);
+        if (courses[course_id].students[index].student_id == studentBody.student_id) {
+            return callback(new Error('Already enrolled student with id ' + studentBody.student_id), null);
+        }
+      }
+    }
+
     var course = courses.filter(function (element) {return element.id == course_id}).pop();
     if (!course) return callback(new Error('No course exists with id ' + course_id), null);
 
-    for(var index in course.students) {
-        if (course.students[index].student_id == studentBody.student_id) {
-            return callback(new Error('Already enrolled student with id ' + studentBody.student_id), null);
-        }
-    }
     var newStudent = new Student(studentBody);
     course.students.push(newStudent);
 
@@ -74,6 +79,3 @@ Service.enrollStudent = function(subject_id, course_id, studentBody, callback) {
 };
 
 module.exports = Service;
-
-
-
