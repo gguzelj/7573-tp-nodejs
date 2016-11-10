@@ -73,6 +73,7 @@ Service.enrollStudent = function(subject_id, course_id, studentBody, callback) {
 
     var newStudent = new Student(studentBody);
     course.students.push(newStudent);
+    --course.vacancy;
 
     return callback(null, newStudent);
 };
