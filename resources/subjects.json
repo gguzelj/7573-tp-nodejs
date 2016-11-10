@@ -30,22 +30,22 @@
             "to": "22:00"
           }
         ],
-        "vacancy": 2,
+        "vacancy": 10,
         "students": [
           {
-            "name": "German",
-            "last_name": "Guzelj",
-            "student_id": "2131231"
+            "name": "Martin",
+            "last_name": "Basili",
+            "student_id": "95067"
           },
           {
-            "name": "Test2",
-            "last_name": "Test1",
-            "student_id": "123"
+            "name": "Esteban",
+            "last_name": "Etcheverria",
+            "student_id": "90983"
           },
           {
-            "name": "German3123",
-            "last_name": "Guzelj1123",
-            "student_id": "2131231111"
+            "name": "Marina",
+            "last_name": "Gonzalez",
+            "student_id": "95043"
           }
         ]
       },
@@ -53,9 +53,9 @@
         "id": 2,
         "headquarters": "(PC) Paseo Colon",
         "professors": [
-          "Profersor test",
-          "profesor 2",
-          "profesor 3"
+          "ADRIAN AGUIRRE",
+          "RICARDO MANUEL PONCE",
+          "LUIS BARRIOS"
         ],
         "schedule": [
           {
@@ -67,7 +67,7 @@
           },
           {
             "classroom": "512",
-            "type": "No se sabe todavía",
+            "type": "Teórica",
             "day": "Jueves",
             "from": "11:00",
             "to": "22:00"
@@ -75,21 +75,6 @@
         ],
         "vacancy": 15,
         "students": [
-          {
-            "name": "German",
-            "last_name": "Guzelj",
-            "student_id": "2131231"
-          },
-          {
-            "name": "Test2",
-            "last_name": "Test1",
-            "student_id": "123"
-          },
-          {
-            "name": "German3123",
-            "last_name": "Guzelj1123",
-            "student_id": "2131231111"
-          }
         ]
       }
     ]
@@ -102,7 +87,7 @@
     "credits": 6,
     "courses": [
       {
-        "id": 1,
+        "id": 3,
         "headquarters": "(PC) Paseo Colon",
         "professors": [
           "CADOCHE, PABLO",
@@ -128,18 +113,13 @@
         "students": [
           {
             "name": "German",
-            "last_name": "Guzelj",
-            "student_id": "2131231"
+            "last_name": "Yrigoyen",
+            "student_id": "92012"
           },
           {
-            "name": "Test2",
-            "last_name": "Test1",
-            "student_id": "123"
-          },
-          {
-            "name": "German3123",
-            "last_name": "Guzelj1123",
-            "student_id": "2131231111"
+            "name": "Lisandro",
+            "last_name": "Langenauer",
+            "student_id": "91293"
           }
         ]
       }
@@ -153,12 +133,13 @@
     "credits": 6,
     "courses": [
       {
-        "id": 1,
+        "id": 4,
         "headquarters": "(PC) Paseo Colon",
         "professors": [
           "DIEZ, EDUARDO LUIS",
           "RUGILO, GUILLERMO HERNAN"
         ],
+        "vacancy": 15,
         "schedule": [
           {
             "classroom": "LC",
@@ -175,7 +156,28 @@
             "to": "21:00"
           }
         ],
-        "vacancy": 0
+        "students": [
+          {
+            "name": "Adrian",
+            "last_name": "Marino",
+            "student_id": "94058"
+          },
+          {
+            "name": "Esteban",
+            "last_name": "Etchangú",
+            "student_id": "91235"
+          },
+          {
+            "name": "Victor",
+            "last_name": "Aguirre",
+            "student_id": "93458"
+          },
+          {
+            "name": "Matias",
+            "last_name": "Barrier",
+            "student_id": "95004"
+          }
+        ]
       }
     ]
   }
